@@ -11,9 +11,10 @@ const Contact = () => {
   const form = useRef()
 
   useEffect(() => {
-    return setTimeout(() => {
+    
+     setTimeout(() => {
       setLetterClass('text-animate-hover')
-    }, 3000)
+    }, 4000)
   }, [])
 
   const sendEmail = (e) => {
@@ -21,10 +22,11 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'gmail',
-        'template_YeJhZkgb',
+        'service_t8xhizb',
+        
+        'template_vnr3deb',
         form.current,
-        'your-token'
+        'ecLzFn_KQQWYa9Jcj'
       )
       .then(
         () => {
@@ -49,8 +51,7 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially ambitious or
-            large projects. However, if you have other request or question,
+            I am interested in freelance opportunities - especially Data Science and Web Development projects. However, if you have other request or question,
             don't hesitate to contact me using below form either.
           </p>
           <div className="contact-form">
@@ -90,20 +91,20 @@ const Contact = () => {
           </div>
         </div>
         <div className="info-map">
-          Slobodan Gajić,
+          M Zain UL Abideen,
           <br />
-          Serbia,
+          Pakistan,
           <br />
-          Branka RadiČevića 19, 22000 <br />
-          Sremska Mitrovica <br />
+          250 B, Citi Housing Samundari Road,<br />
+          Faisalabad <br />
           <br />
-          <span>freelancerslobodan@gmail.com</span>
+          <span>zain57ul@gmail.com</span>
         </div>
         <div className="map-wrap">
-          <MapContainer center={[44.96366, 19.61045]} zoom={13}>
+          <MapContainer center={[31.32459395292131, 73.087042963079]} zoom={14}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[44.96366, 19.61045]}>
-              <Popup>Sloba lives here, come over for a cup of coffee :)</Popup>
+            <Marker position={[31.32459395292131, 73.087042963079]}>
+              <Popup>Zain lives here, come over for a cup of coffee :)</Popup>
             </Marker>
           </MapContainer>
         </div>
